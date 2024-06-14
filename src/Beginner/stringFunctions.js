@@ -1,11 +1,6 @@
-export const isString = (input) => {
-    return typeof input === "string";
-}
+export const containsSubstring  = (text, substring) => {
 
-
-export function getUsernameFromEmail(email) {
-
-    const brokenUpEmail = email.split("@");
-    return brokenUpEmail[0]
-
+    text = text.toLowerCase()
+    substring = substring.toLowerCase()
+    return text.includes(substring)
 }
