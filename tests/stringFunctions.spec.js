@@ -1,5 +1,11 @@
 import { expect, test } from "playwright/test";
-import { isString, getUsernameFromEmail, reverseString, containsSubstring } from "../src/Beginner/stringFunctions";
+import {
+  isString,
+  getUsernameFromEmail,
+  reverseString,
+  containsSubstring,
+  countVowelsAndConsonants
+} from "../src/Beginner/stringFunctions";
 
 test.describe("isString @11a", () => {
     test("should return true for valid strings", async () => {
@@ -81,3 +87,9 @@ test.describe('containsSubstring @11d', () => {
       expect(containsSubstring('Array and objects', 'Array')).toBe(true);
   });
 });
+
+test.describe('containsSubstring @11e', () => {
+  test('Should return a string detailing the vowel and consonants count of an input', async () => {
+    expect(countVowelsAndConsonants("hello")).toBe("Vowels: 2, Consonants: 3" )
+  });
+})

@@ -1,6 +1,5 @@
-export const containsSubstring  = (text, substring) => {
+function countVowelsAndConsonants(string) {
 
-    text = text.toLowerCase()
-    substring = substring.toLowerCase()
-    return text.includes(substring)
+    // your code here
+
 }
