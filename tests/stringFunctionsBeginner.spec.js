@@ -20,6 +20,7 @@ test.describe("isString @11a", () => {
     expect(isString(12345)).toBe(false);
     expect(isString(null)).toBe(false);
     expect(isString(undefined)).toBe(false);
+    expect(isString(true)).toBe(false);
   });
 
   test("should handle edge cases", async () => {
