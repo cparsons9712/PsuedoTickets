@@ -1,16 +1,19 @@
 import { expect, test } from "playwright/test";
 import {
   isString,
-  getUsernameFromEmail,
+  extractUsername,
   reverseString,
   containsSubstring,
   countVowelsAndConsonants,
-} from "../src/Beginner/stringFunctions";
+} from "../src/Beginner/stringFunctions.mjs";
+
+
 
 test.describe("isString @11a", () => {
   test("should return true for valid strings", async () => {
     expect(isString("Hello, World!")).toBe(true);
     expect(isString("12345")).toBe(true);
+    expect(isString("Mary Had a Little Lamb")).toBe(true);
   });
 
   test("should return false for invalid strings", async () => {
@@ -27,20 +30,35 @@ test.describe("isString @11a", () => {
   });
 });
 
-test.describe("getUsernameFromEmail @11b", () => {
-  test("should return the username part of the email address", async () => {
-    expect(getUsernameFromEmail("user@example.com")).toBe("user");
-    expect(getUsernameFromEmail("john.doe@gmail.com")).toBe("john.doe");
-    expect(getUsernameFromEmail("alice@company.org")).toBe("alice");
+
+
+test.describe('extractUsername @11b', () => {
+
+  test('Normal use cases', async () => {
+    expect(extractUsername("john.doe@example.com")).toBe("john.doe");
+    expect(extractUsername("jane.smith@gmail.com")).toBe("jane.smith");
+    expect(extractUsername("user123@yahoo.com")).toBe("user123");
+    expect(extractUsername("username@domain.com")).toBe("username");
+    expect(extractUsername("123@numbers.com")).toBe("123");
   });
 
-  test("should handle edge cases", async () => {
-    expect(getUsernameFromEmail("")).toBe("");
-    expect(getUsernameFromEmail("@example.com")).toBe("");
-    expect(getUsernameFromEmail("user@")).toBe("user");
-    expect(getUsernameFromEmail("user@domain@extra.com")).toBe("user");
+  test('Negative results', async () => {
+    expect(extractUsername("noatsymbol")).toBe("Please enter a valid email address");
+    expect(extractUsername("@nousername.com")).toBe("Please enter a valid email address");
   });
+
+  test('Edge cases', async () => {
+    expect(extractUsername("username@")).toBe("username");
+    expect(extractUsername("name.with.dots@domain.com")).toBe("name.with.dots");
+    expect(extractUsername("noatsymbol")).toBe("Please enter a valid email address");
+    expect(extractUsername("@nousername.com")).toBe("Please enter a valid email address");
+    expect(extractUsername("123@numbers.com")).toBe("123");
+  });
+
 });
+
+
+
 
 test.describe("reverseString @11c", () => {
   test("should reverse a simple string", async () => {
