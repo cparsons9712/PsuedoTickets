@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-import { findMinMaxValues, rotateArray } from '../src/Beginner/arrayFunctions';
+import { findMinMaxValues, rotateArray, removeDuplicates } from '../src/Beginner/arrayFunctions';
 /*
 
 2. Rotate Array: Learn array manipulation and index calculations.
