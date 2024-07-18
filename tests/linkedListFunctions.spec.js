@@ -1,22 +1,13 @@
 const { test, expect } = require('@playwright/test');
 import { reverseLinkedList } from '../src/Beginner/linkedListFunctions.mjs';
-class ListNode {
-    constructor(checkpointID, time, heartRate, speed, splitTime, next = null) {
-      this.checkpointID = checkpointID;
-      this.time = time;
-      this.heartRate = heartRate;
-      this.speed = speed;
-      this.splitTime = splitTime;
-      this.next = next;
-    }
-  }
+import { runnerStat, warehouseOrder } from '../src/Beginner/helperFunctions.mjs';
 
   test.describe('reverseLinkedList @13a', () => {
     test('should reverse a standard linked list', () => {
-      const node3 = new ListNode(3, "01:30:00", 160, 10, "00:30:00");
-      const node2 = new ListNode(2, "01:00:00", 158, 10, "00:30:00", node3);
-      const node1 = new ListNode(1, "00:30:00", 155, 10, "00:30:00", node2);
-      const head = new ListNode(0, "00:00:00", 150, 10, "00:00:00", node1);
+      const node3 = new runnerStat(3, "01:30:00", 160, 10, "00:30:00");
+      const node2 = new runnerStat(2, "01:00:00", 158, 10, "00:30:00", node3);
+      const node1 = new runnerStat(1, "00:30:00", 155, 10, "00:30:00", node2);
+      const head = new runnerStat(0, "00:00:00", 150, 10, "00:00:00", node1);
 
       const reversedHead = reverseLinkedList(head);
 
