@@ -1,17 +1,9 @@
 import { test, expect } from '@playwright/test';
-import mergeSortedLists, {ListNode} from '../src/Beginner/Linked_List/13c.mjs';
+import mergeSortedLists, {ListNode, printList} from '../../../src/Beginner/Linked_List/13c.mjs';
 
 
 
-const printList = (head) => {
-  let current = head;
-  const result = [];
-  while (current !== null) {
-    result.push(current.score);
-    current = current.next;
-  }
-  return result;
-};
+
 
 test.describe('mergeSortedLists @13c', () => {
 

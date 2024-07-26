@@ -1,29 +1,34 @@
+/*************************************
+ * HELPER FUNCTIONS- DO NOT CHANGE
+ * ---- for your reference only -----
+ ***************************************/
 export class ListNode {
     constructor(score, next = null) {
       this.score = score;
       this.next = next;
     }
 }
-
-
-function mergeSortedLists(list1, list2) {
-    const dummy = new ListNode(0);
-    let current = dummy;
-
-    while (list1 !== null && list2 !== null) {
-      if (list1.score <= list2.score) {
-        current.next = list1;
-        list1 = list1.next;
-      } else {
-        current.next = list2;
-        list2 = list2.next;
-      }
+export const printList = (head) => {
+    let current = head;
+    const result = [];
+    while (current !== null) {
+      result.push(current.score);
       current = current.next;
     }
-    if (list1 !== null) current.next = list1;
-    if (list2 !== null) current.next = list2;
+    return result;
+  };
 
-    return dummy.next;
-  }
 
-  export default mergeSortedLists;
+/********************************
+ * END OF HELPER FUNCTIONS
+ * -----------------------------
+ * Write your code below
+ ********************************/
+
+function mergeSortedLists(list1, list2) {
+
+//your code here
+
+}
+
+export default mergeSortedLists;
