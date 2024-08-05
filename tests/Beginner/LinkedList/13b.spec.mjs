@@ -2,8 +2,6 @@ import {test, expect} from "@playwright/test"
 import { detectCycle, warehouseOrder, createLinkedList } from "../../../src/Beginner/Linked_List/13b.mjs";
 
 
-
-
 test.describe("detectCycle @13b", () => {
   test("should detect cycle in a linked list (normal use cases)", async () => {
     const node1 = createLinkedList([1, 2, 3, 4, 5], 2); // Cycle exists
