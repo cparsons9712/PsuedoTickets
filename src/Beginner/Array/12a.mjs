@@ -1,8 +1,3 @@
-
-/********************************
-      Write your code below
-********************************/
-
 export function findMinMaxValues(array) {
     // Your Code Here
 
@@ -10,4 +5,3 @@ export function findMinMaxValues(array) {
 }
 
 export default findMinMaxValues;
-
