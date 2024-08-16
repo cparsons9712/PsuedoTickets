@@ -1,3 +1,5 @@
-export const findMissingSequences = (array) => {
-    // your code here
+export const findMissingSequences = (array) =>  {
+
+    //Your code here
+
 }

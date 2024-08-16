@@ -1,7 +1,7 @@
-export function findMinMaxValues(array) {
-    // Your Code Here
+export const findMinMaxValues=(array)=>{
 
+    //Your code here
 
 }
 
-export default findMinMaxValues;
+
