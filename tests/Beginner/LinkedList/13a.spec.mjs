@@ -1,7 +1,7 @@
 
 import {test, expect} from "@playwright/test";
-import reverseLinkedList from "../../../src/Beginner/Linked_List/13a.mjs";
-import { runnerStat } from "../../../src/Beginner/helperFunctions.mjs";
+import reverseLinkedList, { runnerStat } from "../../../src/Beginner/Linked_List/13a.mjs";
+
 
 
 test.describe("reverseLinkedList @13a", () => {
