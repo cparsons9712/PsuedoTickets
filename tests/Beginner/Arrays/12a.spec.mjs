@@ -1,5 +1,5 @@
 import {test, expect} from "@playwright/test"
-import findMinMaxValues from "../../../src/Beginner/Array/12a.mjs";
+import {findMinMaxValues} from "../../../src/Beginner/Array/12a.mjs";
 
 
 
