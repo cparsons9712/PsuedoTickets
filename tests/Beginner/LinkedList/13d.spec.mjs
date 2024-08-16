@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
-import { removeNthFromEnd } from '../../../src/Beginner/Linked_List/13d.mjs'
+import { removeNthFromEnd, createLinkedList } from '../../../src/Beginner/Linked_List/13d.mjs'
 
-test.describe('removeNthFromEnd function', () => {
+test.describe('removeNthFromEnd @13d', () => {
     test('should remove the 1st node from the end of the list', () => {
         const taskList = createLinkedList([1, 2, 3, 4, 5]);
         const result = removeNthFromEnd(taskList, 1);
