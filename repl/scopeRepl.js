@@ -11,3 +11,8 @@ Object.defineProperty(r.context, "readOnlyVariable", {
     enumerable : true,
     value : readOnlyVariable,
 })
+
+//auto close after 5 seconds
+setTimeout(()=>{
+    r.close();
+}, 5000);
