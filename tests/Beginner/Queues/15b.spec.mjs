@@ -1,7 +1,7 @@
 import {test, expect } from "@playwright/test";
 import { CircularQueue } from "../../../src/Beginner/Queues/15b.mjs";
 
-test.describe('CircularQueue Traffic Queue Tests', () => {
+test.describe('CircularQueue @15b', () => {
 
     test('should correctly enqueue and peek elements in the circular queue', async () => {
       const trafficQueue = new CircularQueue(5);
