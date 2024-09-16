@@ -56,3 +56,4 @@ test.describe('reorderSeatingArrangement @15e', () => {
       expect(result).toEqual([]);
       expect(result.length).toBe(0);
     });
+});
