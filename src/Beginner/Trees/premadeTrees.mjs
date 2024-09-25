@@ -69,3 +69,35 @@ export const imbalancedTree = {
     },
     right: null,
 }
+
+/*
+isSymmetric trees
+*/
+
+export const symTrees = {
+  1: {
+      value: 1,
+      left: { value: 2, left: { value: 3 }, right: { value: 4 } },
+      right: { value: 2, left: { value: 4 }, right: { value: 3 } }
+  },
+  2: {
+      value: 1,
+      left: { value: 2, right: { value: 3 } },
+      right: { value: 2, right: { value: 3 } }
+  },
+  3: {
+      value: 1,
+      left: { value: 2, left: { value: 3 } },
+      right: { value: 2, right: { value: 3 } }
+  },
+  4: {
+      value: 1,
+      left: { value: 2, right: { value: 4 } },
+      right: { value: 2, left: { value: 4 } }
+  },
+  5: {
+      value: 1,
+      left: { value: 2, left: { value: 3 }, right: { value: 4 } },
+      right: { value: 2, left: { value: 4 }, right: { value: 3 } }
+    }
+}
